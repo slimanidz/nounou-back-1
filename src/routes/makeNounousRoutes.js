@@ -82,6 +82,9 @@ const makeUsersRoutes = ({ app, db }) => {
     // }),
     async (req, res) => {
       res.setHeader("Access-Control-Allow-Origin", "*");
+      if (req.method === "OPTIONS") {
+        res.setHeader("Access-Control-Allow-Headers", "Accept, Content-Type");
+      }
 
       // const { limit, offset } = req.query
       const nounous = await db("nounous");
@@ -101,6 +104,9 @@ const makeUsersRoutes = ({ app, db }) => {
     // }),
     async (req, res) => {
       res.setHeader("Access-Control-Allow-Origin", "*");
+      if (req.method === "OPTIONS") {
+        res.setHeader("Access-Control-Allow-Headers", "Accept, Content-Type");
+      }
 
       const { nounouId } = req.params;
 
@@ -127,6 +133,9 @@ const makeUsersRoutes = ({ app, db }) => {
     // }),
     async (req, res) => {
       res.setHeader("Access-Control-Allow-Origin", "*");
+      if (req.method === "OPTIONS") {
+        res.setHeader("Access-Control-Allow-Headers", "Accept, Content-Type");
+      }
 
       const { adresse } = req.params;
       console.log({ adr: adresse });
