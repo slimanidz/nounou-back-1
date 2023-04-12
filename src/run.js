@@ -9,7 +9,7 @@ import makeNounousRoutes from "./routes/makeNounousRoutes.js";
 import makeServiceRoutes from "./routes/makeServicesRoutes.js";
 import makeSessionNounousRoutes from "./routes/makeSessionNounousRoutes.js";
 import makeSessionRoutes from "./routes/makeSessionRoutes.js";
-import makeUploadRoutes from "./routes/makeUploadRoutes.js";
+// import makeUploadRoutes from "./routes/makeUploadRoutes.js";
 import makeUsersRoutes from "./routes/makeUsersRoutes.js";
 
 const app = express();
@@ -28,7 +28,7 @@ makeServiceRoutes({ app, db });
 makeCommentsRoutes({ app, db });
 makeMessagesRoutes({ app, db });
 
-makeUploadRoutes({ app, db });
+// makeUploadRoutes({ app, db });
 
 app.listen(config.server.port, () =>
   // eslint-disable-next-line no-console
