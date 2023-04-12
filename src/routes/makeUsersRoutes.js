@@ -69,11 +69,12 @@ const makeUsersRoutes = ({ app, db }) => {
     // }),
     async (req, res) => {
       // const { limit, offset } = req.query
-      const users = await db("users");
-      // .limit(limit).offset(offset)
-      const [{ count }] = await db("users").count();
+      // const users = await db("users");
+      // // .limit(limit).offset(offset)
+      // const [{ count }] = await db("users").count();
+      // res.send({ result1: users, count });
 
-      res.send({ result1: users, count });
+      res.send({ result1: "Hello World" });
     }
   );
   // READ single
