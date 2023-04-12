@@ -24,6 +24,8 @@ const makeUsersRoutes = ({ app, db }) => {
     //   },
     // }),
     async (req, res) => {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+
       const {
         email,
         username,
@@ -79,7 +81,8 @@ const makeUsersRoutes = ({ app, db }) => {
     //   },
     // }),
     async (req, res) => {
-      res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+      res.setHeader("Access-Control-Allow-Origin", "*");
+
       // const { limit, offset } = req.query
       const nounous = await db("nounous");
       // .limit(limit).offset(offset)
@@ -97,6 +100,8 @@ const makeUsersRoutes = ({ app, db }) => {
     //   },
     // }),
     async (req, res) => {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+
       const { nounouId } = req.params;
 
       // if (typeof userId == "number") {
@@ -121,6 +126,8 @@ const makeUsersRoutes = ({ app, db }) => {
     //   },
     // }),
     async (req, res) => {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+
       const { adresse } = req.params;
       console.log({ adr: adresse });
 
@@ -153,6 +160,8 @@ const makeUsersRoutes = ({ app, db }) => {
     //   },
     // }),
     async (req, res) => {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+
       const {
         params: { nounouId },
         body: { email1, username1, displayName1, password1 },
@@ -240,6 +249,8 @@ const makeUsersRoutes = ({ app, db }) => {
     // },
     // }),
     async (req, res) => {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+
       const {
         params: { nounouId },
         body: { password },
@@ -304,6 +315,8 @@ const makeUsersRoutes = ({ app, db }) => {
     //   },
     // }),
     async (req, res) => {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+
       const { nounouId } = req.params;
       const [nounou] = await db("nounous").where({ id: nounouId });
 
