@@ -79,6 +79,7 @@ const makeUsersRoutes = ({ app, db }) => {
     //   },
     // }),
     async (req, res) => {
+      res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
       // const { limit, offset } = req.query
       const nounous = await db("nounous");
       // .limit(limit).offset(offset)
